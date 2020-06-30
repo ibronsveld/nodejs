@@ -1,0 +1,53 @@
+{
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "name": "@commercetools/customer-exporter",
+  "version": "1.0.0",
+  "description": "Exports customers from the commercetools platform.",
+  "main": "lib/main.js",
+  "bin": {
+    "order-exporter": "bin/customer-exporter.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/**",
+    "build": "babel src --out-dir lib --config-file '../../babel.config.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commercetools/nodejs/tree/master/packages/customer-exporter"
+  },
+  "homepage": "https://commercetools.github.io/nodejs/cli/customer-exporter.html",
+  "bugs": "https://github.com/commercetools/nodejs/issues",
+  "keywords": [
+    "commercetools",
+    "object",
+    "objects",
+    "json",
+    "export",
+    "custom",
+    "cli"
+  ],
+  "author": {
+    "name": "Ivo Bronsveld",
+    "email": "ivo.bronsveld@commercetools.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@commercetools/api-request-builder": "^5.6.1",
+    "@commercetools/get-credentials": "^3.0.16",
+    "@commercetools/sdk-client": "^2.1.2",
+    "@commercetools/sdk-middleware-auth": "^5.1.6",
+    "@commercetools/sdk-middleware-http": "^6.0.7",
+    "@commercetools/sdk-middleware-user-agent": "^2.1.5",
+    "JSONStream": "^1.3.5",
+    "node-fetch": "^2.3.0",
+    "pino": "^6.0.0",
+    "pretty-error": "^2.1.1",
+    "yargs": "^15.0.0"
+  },
+  "devDependencies": {
+    "streamtest": "1.2.4"
+  }
+}
